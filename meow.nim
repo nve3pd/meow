@@ -13,7 +13,7 @@ proc do_cat(path: cstring): int {.discardable.} =
   var 
     fd: cint
     n: int
-    buf: ptr cstring
+    buf: ref cstring
 
   fd = posix.open(path, O_RDONLY)
   if fd < 0:
