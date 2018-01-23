@@ -32,7 +32,6 @@ proc do_cat(path: cstring): int {.discardable.} =
 
 proc main(): int =
   if os.paramCount() < 1:
-    echo "hoge"
     quit(1)
     
   for i in countup(1, os.paramCount()):
